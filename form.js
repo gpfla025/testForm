@@ -15,6 +15,8 @@ function testGS(){
 
 }
 
+document.getElementById("btn").addEventListener("click", testGS);
+
 function addGS(){
 
   const url = "https://script.google.com/macros/s/AKfycbycY-ph646C6GVhZILnQliNKoje10moeRPBoMQtPJrdBeC-X8fq7dqHlYTPIH_MU1xb/exec"
@@ -33,6 +35,6 @@ function addGS(){
 
 }
 
-document.getElementById("btn").addEventListener("click", testGS);
+
 
 document.getElementById("btn2").addEventListener("click", addGS);
