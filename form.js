@@ -29,7 +29,7 @@ function addGS(){
     },
     redirect: 'follow',
     //referrerPolicy: 'no-referrer',
-    body: JSON.stringify({First:"Esther",Last:"Shim",Phone:"010-5858-7454"})
+    body: JSON.stringify({First:"Esther",Phone:"010-5858-7454",Last:"Shim"})
   });
 
 }
