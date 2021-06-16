@@ -1,71 +1,31 @@
-var customerForm = document.getElementById("customerForm");
-var firstName = document.getElementById("firstName");
-var lastName = document.getElementById("lastName");
-var phoneNumber = document.getElementById("phoneNumber");
-var city = document.getElementById("city");
-var submitButton = document.getElementById("submitButton");
-var buttonSpinner = document.getElementById("buttonSpinner");
-var buttonText = document.getElementById("buttonText");
-var unknownError = document.getElementById("unknownError");
+function testGS(){
+    const url = "https://script.google.com/macros/s/AKfycbxXdtmC4WLNvSD6cFhAwjy7eOBHHFR3cRh17R4TgcBcGlWLHqXZ5PjiFjtfJiohv-Fc/exec"
 
-
-function afterSubmit(e){
-
-    e.preventDefault();
-
-    if (customerForm.checkValidity() === false) {
-        e.stopPropagation();
-        for(let field of customerForm.elements) {
-            if(!field.checkValidity()){
-                field.classList.add("is-invalid");
-            }
-        }
-        return;
-    }
-
-    for(let field of customerForm.elements) {
-            field.classList.remove("is-invalid");
-    }
-
-    var info = {
-        first: firstName.value,
-        last: lastName.value,
-        phone: phoneNumber.value,
-        city: city.value,
-    };
-
-    var url = "https://script.google.com/macros/s/AKfycbzl538XSe-2gVotIsBDy1bcBZYO5HAapKpcoR55cM-EQ9kSPPAVEtkvumPer24yi-uI/exec";
-
-    buttonText.textContent = "Saving..";
-    buttonSpinner.classList.remove("d-none");
-    submitButton.disabled = true;
-
-    fetch(url,{
-        method: 'POST',
-        cache: 'no-cache',
-        redirect: 'follow',
-        body: JSON.stringify(info)
-      })
-      .then(res => res.json())
-      .then(res => {
-        console.log(res);
-        customerForm.reset();
-        buttonText.textContent = "Send";
-        buttonSpinner.classList.add("d-none");
-        submitButton.disabled = false;
-      })
-      .catch(err => {
-        console.log(err);
-        console.log("Something Went Wrong");
-        unknownError.classList.remove("d-none");
-        setTimeout(function(){
-            unknownError.classList.add("d-none");
-            buttonText.textContent = "Send";
-            buttonSpinner.classList.add("d-none");
-            submitButton.disabled = false;
-        },3000);
+    fetch(url)
+      .then(d => d.json())
+      .then(d => {
+      
+          document.getElementById("app").textContent = d[0].status;
+      
       });
 
 }
 
-customerForm.addEventListener("submit",afterSubmit);
+document.getElementById("btn").addEventListener("click", testGS);
+
+function addGS(){
+    const url = "https://script.google.com/macros/s/AKfycbxXdtmC4WLNvSD6cFhAwjy7eOBHHFR3cRh17R4TgcBcGlWLHqXZ5PjiFjtfJiohv-Fc/exec"
+
+  fetch(url, {
+    method: 'POST',
+    mode: 'no-cors',
+    cache: 'no-cache',
+    //credentials: 'omit',
+    //headers: { 'Content-Type': 'application/json' },
+    redirect: 'follow',
+    body: JSON.stringify({name:"HOE", phone: "01025525585", email:"lim@gmail.com", city:"Hayang"})
+  });
+
+}
+
+document.getElementById("btn2").addEventListener("click", addGS);
