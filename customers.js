@@ -1,5 +1,5 @@
 function testGS(){
-    const url = "https://script.google.com/macros/s/AKfycbzZOPQppON5lvB6VujE2PzC8EMdyMOVh1M-XWdg5SfwhQbw88VijhuZoEIymLaLKS-I/exec"
+    const url = "https://script.google.com/macros/s/AKfycbzn-vjkl4BHUGJY8_k_S95cPlzVRkvyOEFOL6YoFwuX-Ryl5HSv8ixrTmqpmFjcn5Sl/exec"
 
     fetch(url)
       .then(d => d.json())
@@ -14,7 +14,7 @@ function testGS(){
 document.getElementById("btn").addEventListener("click", testGS);
 
 function addGS(){
-    const url = "https://script.google.com/macros/s/AKfycbzZOPQppON5lvB6VujE2PzC8EMdyMOVh1M-XWdg5SfwhQbw88VijhuZoEIymLaLKS-I/exec"
+    const url = "https://script.google.com/macros/s/AKfycbzn-vjkl4BHUGJY8_k_S95cPlzVRkvyOEFOL6YoFwuX-Ryl5HSv8ixrTmqpmFjcn5Sl/exec"
 
   fetch(url, {
     method: 'POST',
