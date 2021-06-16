@@ -20,8 +20,10 @@ function addGS(){
     method: 'POST',
     mode: 'no-cors',
     cache: 'no-cache',
-    //credentials: 'omit',
-    headers: { 'Content-Type': 'application/json' },
+    credentials: 'omit',
+    headers: { 
+        'Content-Type': 'application/json' 
+    },
     redirect: 'follow',
     body: JSON.stringify({first:"Hyelim",last:"Shim",phone:"010-0505-1234"})
   });
