@@ -25,7 +25,7 @@ function addGS(){
         'Content-Type': 'application/json' 
     },
     redirect: 'follow',
-    body: JSON.stringify({first:"Hyelim",last:"Lim",phone:"010-2222-3333"})
+    body: JSON.stringify({first:"혜림",phone:"010-2222-3333",last:"심"})
   });
 
 }
