@@ -23,7 +23,7 @@ function addGS(){
     //credentials: 'omit',
     //headers: { 'Content-Type': 'application/json' },
     redirect: 'follow',
-    body: JSON.stringify({first:"Esther",last:"Shim",phone:"010-5858-7454",city:"hayang"})
+    body: JSON.stringify({first:"Esther",last:"Shim",phone:"010-5858-7454"})
   });
 
 }
