@@ -20,7 +20,7 @@ function addGS(){
     method: 'POST',
     mode: 'no-cors',
     cache: 'no-cache',
-    credentials: 'omit',
+    //credentials: 'omit',
     headers: { 
         'Content-Type': 'application/json' 
     },
