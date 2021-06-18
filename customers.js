@@ -21,11 +21,11 @@ function afterSubmit(e){
             }
         }
         return;
-    }
+    };
 
     for(let field of customerForm.elements) {
             field.classList.remove("is-invalid");
-    }
+    };
 
   //colunm name:html name
     var info = {
